@@ -1,0 +1,92 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+
+}
+
+.game-board {
+    width: 100%;
+    height: 630px;
+    border-bottom: 15px solid #171D31;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#000000, #343b4444);
+    background-image: url('cenario3.jpg');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: repeat-x;
+    animation: moverBackground 15s linear infinite;
+}
+@keyframes moverBackground{
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -1000px 0;        
+    }
+
+
+}
+
+.lobo {
+    position: absolute;
+    bottom: 0;
+    width: 65px;
+    right: -70px;
+    animation: lobo-animation 2s infinite linear;
+ 
+   
+}
+
+.ronin {
+    width: 83px;
+    position: absolute;
+    bottom: 0;
+    translate: 100px;
+    
+}
+
+.jump{
+    animation: jump 0.9s  ease-in-out; 
+}
+
+
+@keyframes lobo-animation {
+    from {
+        right: -90;
+    }
+
+    to  {
+        right: 100%;
+    }
+    
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+
+    }
+    40% {
+     bottom: 190px;
+
+    }
+    50% {
+        bottom: 190px;
+        
+
+    }
+    60% {
+        bottom: 190px;
+        
+
+    }
+    100% {
+        bottom: 0;
+    }
+     
+
+
+}
